@@ -1,0 +1,55 @@
+.inner{
+    width: 1200px !important;
+    margin: 0 auto !important;
+}
+#hd{
+
+    .inner{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            background-color: pink;
+        }
+    a{
+        display: block;
+    }
+}
+#gnb{
+    display: flex;
+    li.depth1{//메뉴리스트
+        position: relative;
+        &:hover{
+            .depth3{display: block;
+                        }  
+                }
+
+        a.depth2{//대메뉴들
+            font-size: 1.5em;
+            padding: 15px;
+            border: 1px solid black;
+            margin: 3px;
+            background-color: rgb(176, 233, 235);
+        }
+        .depth3{//소메뉴들
+            display: none;
+            position: absolute;
+            left:0px;
+            top: 100%;
+            background-color: white;
+            border: 1px solid black;
+            //margin: 5px;
+            min-width: 120px;
+            max-width: 150px;
+            right: 0px;
+            li a:hover{
+                color: yellow;
+                background-color: black;
+
+            }
+
+            
+        }
+
+    }
+}
